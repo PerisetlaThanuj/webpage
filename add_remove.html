@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Food List</title>
+</head>
+<body>
+
+<h2>My Favorite Foods</h2>
+
+<ul id="foodList"></ul>
+
+<script>
+    const foods = ["Pizza", "Burger", "Pasta", "Ice Cream"];
+    const ul = document.getElementById("foodList");
+
+    foods.forEach(food => {
+        const li = document.createElement("li");
+        li.textContent = food;
+        ul.appendChild(li);
+    });
+
+    ul.firstElementChild.textContent = "Biryani";
+    ul.removeChild(ul.lastElementChild);
+</script>
+
+</body>
+</html>
